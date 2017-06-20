@@ -1,13 +1,12 @@
 <div class="container spacer">
 {{#each articles}}
     <div class="row">
-        {{!-- <div class="col-sm-3">
-            <img src="{{this.img}}" alt="Post IMG">
-        </div> --}}
+        <div class="col-sm-3">
+            <img src="{{this.img}}">
+        </div>
         <div class="col-sm-7">
             <h4>{{this.title}}</h4>
-            {{!-- <br> --}}
-            {{!-- <p>{{this.excerpt}}</p> --}}
+
             <a href="{{this.link}}" target="_BLANK">See this Pupper on Reddit!</a>
         </div>
         {{#if this.saved}}

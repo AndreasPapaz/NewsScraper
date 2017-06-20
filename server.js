@@ -37,8 +37,8 @@ app.engine("handlebars", exphbs({ defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
 // DB config with mongoose
-mongoose.connect("mongodb://heroku_bld1v7lc:a7gtfn7un0hsua6e3jvf9pq2pr@ds131312.mlab.com:31312/heroku_bld1v7lc");
-// mongoose.connect("mongodb://localhost/newscrapper");
+// mongoose.connect("mongodb://heroku_bld1v7lc:a7gtfn7un0hsua6e3jvf9pq2pr@ds131312.mlab.com:31312/heroku_bld1v7lc");
+mongoose.connect("mongodb://localhost/newscrapper");
 var db = mongoose.connection;
 
 //show any mongoose err

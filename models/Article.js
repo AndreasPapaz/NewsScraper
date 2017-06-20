@@ -6,7 +6,7 @@ var ArticleSchema = new Schema({
 		type: String,
 		require: true
 	},
-	excerpt: String,
+	img: String,
 	link: String,
 	photoLink: String,
 	comments: [],

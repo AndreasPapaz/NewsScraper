@@ -27,7 +27,7 @@ router.get("/scrape", function(req, res) {
 				// var link = $(element).children("ul.flat-list").children("li.first").children("a").attr("href");
 				var link = $(element).children("div.entry").children("ul.flat-list").children("li.first").children("a").attr("href");
 				// var img = $(element).children("a.thumbnail").children("img").attr("href");
-				var img = $(element).children("a").attr("href");
+				var img = $(element).children("a.thumbnail").children("img").attr("src");
 
 				var article = {
 					"title": title,
