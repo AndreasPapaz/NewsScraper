@@ -107,9 +107,10 @@ router.put("/saved/post_comment", function(req, res) {
 		"author": req.body.author,
 		"comment": req.body.comment
 	};
-	Article.update({_id: req.body.id}, {$push: {comments: comment}}, function(err, status) {
+	Article.update({ _id: req.body.id }, { $push: {comments: comment}}, function(err, status) {
 		if (err) {
-			res.send("fail");
+			// res.send("fail");
+			console.log("err from comment " + err);
 		} else {
 			res.send("pass");
 		}
@@ -117,7 +118,7 @@ router.put("/saved/post_comment", function(req, res) {
 });
 
 router.put("/saved/delete_comment", function(req, res) {
-	Article.update({_id: req.body.articleId}, { $pull: {"comments": {commentId: res.body.commentId }}}, function(err, status) {
+	Article.update({ _id: req.body.articleId }, { $pull: {"comments": {commentId: req.body.commentId }}}, function(err, status) {
 		if (err) {
 			res.send("fail");
 		} else {

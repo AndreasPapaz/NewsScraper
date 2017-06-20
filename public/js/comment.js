@@ -26,6 +26,8 @@ $(document.body).on('click', '.glyphicon-remove', function() {
     $(this).addClass('disabled');
     var articleId = $(this).attr("data-articleId");
 
+    console.log("+++++++++ " + articleId + " +++++++++");
+
     $.ajax({
         url: '/saved/delete_comment',
         type: 'PUT',
