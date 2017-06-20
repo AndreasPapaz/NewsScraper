@@ -51,6 +51,8 @@ db.once("open", function() {
 
 // ROUTES
 //pass routes and scrapper in the router.js
+var routes = require("./routes/routes.js");
+app.use("/", routes);
 
 //LISTEN ON PORT
 app.listen(PORT, function() {

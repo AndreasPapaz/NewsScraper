@@ -1,0 +1,28 @@
+<div class="container spacer">
+{{#each articles}}
+    <div class="row">
+       {{!--  <div class="col-sm-3">
+            <img src="{{this.img}}" alt="Post IMG">
+        </div> --}}
+        <div class="col-sm-7">
+            <h4>{{this.title}}</h4>
+            <br>
+            <p>{{this.excerpt}}</p>
+            <a href="{{this.link}}" target="_BLANK">View this pupper on reddit!</a>
+        </div>
+        <div class="col-sm-2">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <a href="/saved/comments/{{this._id}}" class="btn btn-primary comments">View Comments</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <a id="{{this._id}}" class="btn btn-default delete">Delete Pupper</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+ {{/each}}
+ </div>
