@@ -22,24 +22,24 @@ $(document.body).on('click', '.post-comment', function() {
     });
 });
 
-// $(document.body).on('click', '.glyphicon-remove', function() {
-//     $(this).addClass('disabled');
-//     var articleId = $(this).attr("data-articleId");
+$(document.body).on('click', '.glyphicon-remove', function() {
+    $(this).addClass('disabled');
+    var articleId = $(this).attr("data-articleId");
 
-//     $.ajax({
-//         url: '/saved/delete_comment',
-//         type: 'PUT',
-//         data: {
-//             commentId: this.id,
-//             articleId: articleId
+    $.ajax({
+        url: '/saved/delete_comment',
+        type: 'PUT',
+        data: {
+            commentId: this.id,
+            articleId: articleId
 
-//         },
-//         success: function(response) {
-//             if (response === "fail") {
-//                 console.log("Save FAILED");
-//             } else {
-//                 location.reload();
-//             }
-//         }
-//     });
-// });
+        },
+        success: function(response) {
+            if (response === "fail") {
+                console.log("Save FAILED");
+            } else {
+                location.reload();
+            }
+        }
+    });
+});

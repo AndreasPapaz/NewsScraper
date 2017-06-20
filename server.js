@@ -3,6 +3,7 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var exphbs = require("express-handlebars");
+var favicon = require("serve-favicon");
 var PORT = process.env.PORT || 3000;
 
 //Requiring the article model
@@ -26,6 +27,7 @@ app.use(bodyParser.json({
     type: "application/vnd.api+json"
 }));
 app.use(express.static(__dirname + '/public/assets'));
+app.use(favicon(__dirname + "/public/img/favicon.ico"));
 
 //Make public a static dir
 app.use(express.static("public"));

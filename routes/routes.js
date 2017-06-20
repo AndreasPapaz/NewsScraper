@@ -90,6 +90,16 @@ router.get("/", function(req, res) {
 	});
 });
 
+router.put("/saved/remove_article", function(req, res) {
+	Article.update({ _id: req.body.id }, { $set: { saved: false }}, function(err, status) {
+		if (err) {
+			res.send("fail");
+		} else {
+			res.send("pass");
+		}
+	});
+});
+
 router.put("/saved/post_comment", function(req, res) {
 	var comment = {
 		"articleId": req.body.id,
