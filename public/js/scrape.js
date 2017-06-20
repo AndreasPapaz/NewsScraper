@@ -23,7 +23,7 @@ $(document.body).on('click', '.save', function() {
                 console.log("Save FAILED");
             }
             else {
-                console.log("saved");
+                console.log(this.id);
             }
         }
     });

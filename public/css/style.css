@@ -1,0 +1,55 @@
+.scrape-btn {
+    margin-top: 10.5px;
+}
+
+footer {
+    /*background-color: #30659B !important;*/
+    background-color: whitesmoke !important;
+    color: black;
+    border-top: solid lightgrey 1px;
+}
+
+.navbar {
+    background-color: whitesmoke !important;
+}
+
+.spacer {
+    margin-top: 82px;
+}
+
+.save {
+    margin-top: 85px;
+}
+
+.footer-margin {
+    margin: 10px 0px;
+}
+
+.icons {
+    max-width: 25px;
+}
+
+body {
+    padding-bottom: 20px;
+}
+
+.delete {
+    margin-top: 65px;
+}
+
+.comments {
+    margin-top: 65px;
+}
+
+.comment-header {
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+.post-comment {
+    margin-bottom: 40px;
+}
+
+.grey-txt {
+    color: lightgray;
+}

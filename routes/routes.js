@@ -51,17 +51,20 @@ router.get("/saved", function(req, res) {
 		if (err) {
 			console.log("error from saved " + err);
 		} else {
-			res.render("saved.handlebars", {article: article});
+			res.render("saved.handlebars", {articles: article});
 		}
 	});
 });
 
 router.get("/saved/comments/:id", function(req, res) {
-	Article.find({"_id": req.params.id}, function(err, article) {
+	Article.find({ "_id": req.params.id }, function(err, articles) {
 		if (err) {
-			console.log("err from saved comments " + err);
+			console.log("err from comments " + err);
 		} else {
-			res.render("comments.handlebars", { article: article, comments: article[0].comments});
+			res.render("comments.handlebars", { 
+				articles: articles,
+				comments: articles[0].comments
+			});
 		}
 	});
 });
