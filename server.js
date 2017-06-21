@@ -39,17 +39,17 @@ app.set("view engine", "handlebars");
 // DB config with mongoose
 mongoose.connect("mongodb://heroku_bld1v7lc:a7gtfn7un0hsua6e3jvf9pq2pr@ds131312.mlab.com:31312/heroku_bld1v7lc");
 // mongoose.connect("mongodb://localhost/newscrapper");
-var db = mongoose.connection;
+// var db = mongoose.connection;
 
 //show any mongoose err
-db.on("error", function(error) {
-	console.log("MONGOOSE ERROR: ", error);
-});
+// db.on("error", function(error) {
+// 	console.log("MONGOOSE ERROR: ", error);
+// });
 
 //Once logged into the db through mongoose, message longon succuess
-db.once("open", function() {
-	console.log("MONGOOSE CONNECTION SUCCESSFUL!");
-});
+// db.once("open", function() {
+// 	console.log("MONGOOSE CONNECTION SUCCESSFUL!");
+// });
 
 
 // ROUTES
